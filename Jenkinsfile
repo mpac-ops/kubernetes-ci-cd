@@ -7,7 +7,7 @@ node {
     sh "git rev-parse --short HEAD > commit-id"
 
     tag = readFile('commit-id').replace("\n", "").replace("\r", "")
-    userName = "Example/"
+    userName = "example/"
     appName = "hello-kenzan"
     registryHost = "registry.mpacops.ca/"
     imageName = "${registryHost}${userName}${appName}:${tag}"
